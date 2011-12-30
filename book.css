@@ -1,0 +1,53 @@
+.ui-dialog .ui-dialog-content {
+	overflow: hidden;
+}
+.book {
+	text-align: center;
+}
+.book .page {
+	width: 400px;
+	height: 350px;
+	position: absolute;
+	background: white;
+	overflow: hidden;
+}
+.book .right-side {
+	left: 400px;
+}
+.book .left-side {
+	left: 0px;
+}
+.ui-dialog .ui-dialog-titlebar{
+	padding: 0;
+	border: 0;
+	background: none;
+}
+.ui-dialog {
+	background: none;
+	border: 0;
+}
+.ui-widget-overlay {
+	background: #000;
+	opacity: .8;
+	filter: alpha(opacity = 80);
+}
+a.arrow {
+	color: #fff;
+	width: 20px;
+	height: 350px;
+	z-index: 1000;
+	position: absolute;
+	background-color: #000;
+	opacity: .2;
+	filter: alpha(opacity = 20);
+}
+a.arrow:hover {
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}
+.right-arrow {
+	left: 780px;
+}
+.left-arrow {
+	left: 0;
+}
