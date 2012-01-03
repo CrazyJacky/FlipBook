@@ -1,6 +1,3 @@
-.ui-dialog .ui-dialog-content {
-	overflow: hidden;
-}
 .book {
 	text-align: center;
 }
@@ -13,18 +10,29 @@
 }
 .book .right-side {
 	left: 400px;
+	-moz-border-radius: 0 15px 15px 0;
+	-webkit-border-radius: 0 15px 15px 0;
+	-khtml-border-radius: 0 15px 15px 0;
+	border-radius: 0 15px 15px 0;
 }
 .book .left-side {
 	left: 0px;
+	-moz-border-radius: 15px 0 0 15px;
+	-webkit-border-radius: 15px 0 0 15px;
+	-khtml-border-radius: 15px 0 0 15px;
+	border-radius: 15px 0 0 15px;
 }
-.ui-dialog .ui-dialog-titlebar{
+.flipbook.ui-dialog {
+	background: none;
+	border: 0;
+}
+.flipbook.ui-dialog .ui-dialog-content {
+	overflow: hidden;
+}
+.flipbook.ui-dialog .ui-dialog-titlebar {
 	padding: 0;
 	border: 0;
 	background: none;
-}
-.ui-dialog {
-	background: none;
-	border: 0;
 }
 .ui-widget-overlay {
 	background: #000;
@@ -40,6 +48,7 @@ a.arrow {
 	background-color: #000;
 	opacity: .2;
 	filter: alpha(opacity = 20);
+	text-decoration: none;
 }
 a.arrow:hover {
 	opacity: .5;
@@ -47,7 +56,17 @@ a.arrow:hover {
 }
 .right-arrow {
 	left: 780px;
+	-moz-border-radius: 0 15px 15px 0;
+	-webkit-border-radius: 0 15px 15px 0;
+	-khtml-border-radius: 0 15px 15px 0;
+	border-radius: 0 15px 15px 0;
 }
 .left-arrow {
 	left: 0;
+	-moz-border-radius: 15px 0 0 15px;
+	-webkit-border-radius: 15px 0 0 15px;
+	-khtml-border-radius: 15px 0 0 15px;
+	border-radius: 15px 0 0 15px;
+}
+.rounded-corners {
 }

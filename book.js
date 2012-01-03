@@ -5,10 +5,10 @@
 		
 		this.each(function() {
 			var modal = $(this);
-			$(this).dialog({modal: true, width: params.page_width * 2, height: params.page_width, draggable: false, resizable: false, position: "center"});
+			$(this).dialog({dialogClass: "flipbook", modal: true, width: params.page_width * 2, height: params.page_width, draggable: false, resizable: false, position: "center"});
 			
-			var left_arrow = $('<a class="left-arrow arrow">&lt;</a>').prependTo($(this)).hide();
-			var right_arrow = $('<a class="right-arrow arrow">&gt;</a>').appendTo($(this));
+			var left_arrow = $('<a alt="Previous Page" title="Previous Page" href="#" class="left-arrow arrow">&lt;</a>').prependTo($(this)).hide();
+			var right_arrow = $('<a alt="Next Page" title="Next Page" href="#" class="right-arrow arrow">&gt;</a>').appendTo($(this));
 			
 			var pages = $(this).find(".page").wrapInner('<div class="page_wrapper" />');
 			
@@ -87,7 +87,8 @@
 					}});
 					
 					next_page.css({"width": 0});
-					next_page.animate({"left": params.page_width, "width": params.page_width / 2 }, { duration: params.turn_speed / 2, queue: false, easing: "linear", complete: function() {
+					next_page.animate(
+						{"left": params.page_width, "width": params.page_width / 2 }, { duration: params.turn_speed / 2, queue: false, easing: "linear", complete: function() {
 						$(this).css("z-index", 1000).addClass("left-side").removeClass("right-side");
 						
 						if($(".right-side").length == 0) {
@@ -120,6 +121,8 @@
 						FlipLeft();
 						break;
 				}
+				
+				return true;
 			});
 			
 			right_arrow.click( FlipRight );
